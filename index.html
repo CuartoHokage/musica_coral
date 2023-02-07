@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicona</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="app">
+        <div class="contenedor-izquierdo">
+            <ul class="lista-canciones">
+                <li class="cancion">
+                    cancion 1
+                </li>
+                <li class="cancion">
+                    cancion 2
+                </li>
+            </ul>
+        </div>
+        <div class="contenedor-derecho">
+            <audio class="audio" controls></audio>
+        </div>
+
+        <form class="upload-form" action="/canciones" method="POST" enctype="multipart/form-data">
+            Subir cancion:
+            <input type="file" name="cancion">
+            <input type="submit" value="Subir musica">
+        </form>
+
+        <form class="list" action="/lista" method="POST" enctype="application/x-www-form-urlencoded">
+            Refrescar
+            
+            <input type="submit" value="Refrescar">
+        </form>
+    </div>
+    <script src="jquery/jquery.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
